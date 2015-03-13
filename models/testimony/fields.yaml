@@ -1,0 +1,14 @@
+fields:
+    is_public:
+        label: Is this testimony public?
+        type: radio
+        options:
+            0: Private
+            1: Public
+        default: 1
+
+    content:
+        type: richeditor
+
+    author:
+        label: Author

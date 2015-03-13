@@ -1,0 +1,15 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        invisible: true
+
+    is_public:
+        label: Public
+        type: switch
+
+    author:
+        label: Author
