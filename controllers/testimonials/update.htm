@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('mja/testimonies/testimonies') ?>">Testimonies</a></li>
+        <li><a href="<?= Backend::url('mja/testimonials/testimonials') ?>">Testimonials</a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -18,9 +18,9 @@
                     data-request="onSave"
                     data-hotkey="ctrl+s"
                     data-hotkey-mac="cmd+s"
-                    data-load-indicator="Creating testimony..."
+                    data-load-indicator="Updating testimonial..."
                     class="btn btn-primary">
-                    Create
+                    Save
                 </button>
                 <button
                     type="button"
@@ -28,19 +28,25 @@
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter"
                     data-hotkey-mac="cmd+enter"
-                    data-load-indicator="Creating testimony..."
+                    data-load-indicator="Updating testimonial..."
                     class="btn btn-default">
-                    Create and Close
+                    Save and Close
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('mja/testimonies/testimonies') ?>">Cancel</a>
+                    or <a href="<?= Backend::url('mja/testimonials/testimonials') ?>">Cancel</a>
                 </span>
             </div>
         </div>
 
     <?= Form::close() ?>
+    </div>
 
 <?php else: ?>
-    <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('mja/testimonies/testimonies') ?>" class="btn btn-default">Return to testimony list</a></p>
+    <div class="padded-container">
+        <div class="control-breadcrumb">
+            <?= Block::placeholder('breadcrumb') ?>
+        </div>
+        <p class="flash-message static error"><?= e($this->fatalError) ?></p>
+        <p><a href="<?= Backend::url('tiipiik/booking/rooms') ?>" class="btn btn-default">Return to testimonial list</a></p>
+    </div>
 <?php endif ?>

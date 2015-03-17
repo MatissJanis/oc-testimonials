@@ -1,0 +1,27 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Testimonial
+
+# Model Form Field configuration
+form: @/plugins/mja/testimonials/models/testimonial/fields.yaml
+
+# Model Class name
+modelClass: Mja\Testimonials\Models\Testimonial
+
+# Default redirect location
+defaultRedirect: mja/testimonials/testimonials
+
+# Create page
+create:
+    title: Create Testimonial
+    redirect: mja/testimonials/testimonials/update/:id
+    redirectClose: mja/testimonials/testimonials
+
+# Update page
+update:
+    title: Edit Testimonial
+    redirect: mja/testimonials/testimonials
+    redirectClose: mja/testimonials/testimonials

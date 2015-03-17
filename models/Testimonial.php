@@ -1,16 +1,16 @@
-<?php namespace Mja\Testimonies\Models;
+<?php namespace Mja\Testimonials\Models;
 
 use Model;
 
 /**
- * Testimony Model
+ * Testimonial Model
  */
-class Testimony extends Model
+class Testimonial extends Model
 {
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'mja_testimonies';
+    public $table = 'mja_testimonials_testimonials';
 
     /**
      * @var array Translatable fields

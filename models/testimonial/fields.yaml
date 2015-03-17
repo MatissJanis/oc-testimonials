@@ -1,6 +1,6 @@
 fields:
     is_public:
-        label: Is this testimony public?
+        label: Is this testimonial public?
         type: radio
         options:
             0: Private

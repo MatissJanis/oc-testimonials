@@ -1,14 +1,14 @@
-<?php namespace Mja\Testimonies\Updates;
+<?php namespace Mja\Testimonials\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class CreateTestimonyTable extends Migration
+class CreateTestimonialTable extends Migration
 {
 
     public function up()
     {
-        Schema::create('mja_testimonies', function($table)
+        Schema::create('mja_testimonials_testimonials', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -21,7 +21,7 @@ class CreateTestimonyTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('mja_testimonies');
+        Schema::dropIfExists('mja_testimonials_testimonials');
     }
 
 }

@@ -1,13 +1,13 @@
-<?php namespace Mja\Testimonies\Controllers;
+<?php namespace Mja\Testimonials\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
-use Mja\Testimonies\Models\Testimony;
+use Mja\Testimonials\Models\Testimonial;
 
 /**
- * Testimonies Back-end Controller
+ * Testimonials Back-end Controller
  */
-class Testimonies extends Controller
+class Testimonials extends Controller
 {
     public $implement = [
         'Backend.Behaviors.FormController',
@@ -17,13 +17,13 @@ class Testimonies extends Controller
     public $formConfig = 'config_form.yaml';
     public $listConfig = 'config_list.yaml';
 
-    public $requiredPermissions = ['mja.testimonies.access_testimonies'];
+    public $requiredPermissions = ['mja.testimonials.access_testimonials'];
 
     public function __construct()
     {
         parent::__construct();
 
-        BackendMenu::setContext('Mja.Testimonies', 'testimonies', 'testimonies');
+        BackendMenu::setContext('Mja.Testimonials', 'testimonials', 'testimonials');
     }
 
     public function index_onDelete()
@@ -31,13 +31,13 @@ class Testimonies extends Controller
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
 
             foreach ($checkedIds as $postId) {
-                if (!$post = Testimony::find($postId))
+                if (!$post = Testimonial::find($postId))
                     continue;
 
                 $post->delete();
             }
 
-            Flash::success('Successfully deleted those testimonies.');
+            Flash::success('Successfully deleted those testimonials.');
         }
 
         return $this->listRefresh();

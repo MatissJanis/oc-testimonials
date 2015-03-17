@@ -1,0 +1,6 @@
+{% for testimonial in testimonials %}
+    <div class="testimonial">
+        {{ testimonial.content|raw }}
+        <p><i>/{{ testimonial.author }}/</i></p>
+    </div>
+{% endfor %}

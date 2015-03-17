@@ -1,10 +1,10 @@
-<?php namespace Mja\Testimonies;
+<?php namespace Mja\Testimonials;
 
 use Backend;
 use System\Classes\PluginBase;
 
 /**
- * Testimony Plugin Information File
+ * Testimonial Plugin Information File
  */
 class Plugin extends PluginBase
 {
@@ -19,9 +19,10 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'Testimonies',
-            'description' => 'Create and manage testimonies about You project or product.',
+            'name'        => 'Testimonials',
+            'description' => 'Create and manage testimonials about You project or product.',
             'author'      => 'Matiss Janis Aboltins',
+            'homepage'    => '',
             'icon'        => 'icon-thumbs-o-up'
         ];
     }
@@ -29,16 +30,16 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Mja\Testimonies\Components\Testimonies' => 'testimonies',
+            'Mja\Testimonials\Components\Testimonials' => 'testimonials',
         ];
     }
 
 	public function registerPermissions()
 	{
 		return [
-            'mja.testimonies.access_testimonies' => [
-                'tab' => 'mja.testimonies::lang.permissions.tab',
-                'label' => 'mja.testimonies::lang.permissions.testimonies'
+            'mja.testimonials.access_testimonials' => [
+                'tab' => 'mja.testimonials::lang.permissions.tab',
+                'label' => 'mja.testimonials::lang.permissions.testimonials'
             ],
         ];
 	}
@@ -46,11 +47,11 @@ class Plugin extends PluginBase
     public function registerNavigation()
     {
         return [
-            'testimonies' => [
-                'label'       => 'Testimonies',
-                'url'         => Backend::url('mja/testimonies/testimonies'),
+            'testimonials' => [
+                'label'       => 'Testimonials',
+                'url'         => Backend::url('mja/testimonials/testimonials'),
                 'icon'        => 'icon-thumbs-o-up',
-                'permissions' => ['mja.testimonies.*'],
+                'permissions' => ['mja.testimonials.*'],
             ]
         ];
     }

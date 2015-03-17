@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: @/plugins/mja/testimonies/models/testimony/columns.yaml
+list: @/plugins/mja/testimonials/models/testimonial/columns.yaml
 
 # Model Class name
-modelClass: Mja\Testimonies\Models\Testimony
+modelClass: Mja\Testimonials\Models\Testimonial
 
 # List Title
-title: Manage Testimonies
+title: Manage Testimonials
 
 # Link URL for each record
-recordUrl: mja/testimonies/testimonies/update/:id
+recordUrl: mja/testimonials/testimonials/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records
