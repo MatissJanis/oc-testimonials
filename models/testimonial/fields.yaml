@@ -1,14 +1,14 @@
 fields:
     is_public:
-        label: Is this testimonial public?
+        label: mja.testimonials::lang.fields.is_public
         type: radio
         options:
-            0: Private
-            1: Public
+            0: mja.testimonials::lang.fields.private
+            1: mja.testimonials::lang.fields.public
         default: 1
 
     content:
         type: richeditor
 
     author:
-        label: Author
+        label: mja.testimonials::lang.fields.author

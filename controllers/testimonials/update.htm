@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('mja/testimonials/testimonials') ?>">Testimonials</a></li>
+        <li><a href="<?= Backend::url('mja/testimonials/testimonials') ?>"><?= e(trans('mja.testimonials::lang.controller.view.breadcrumb_label')) ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -18,9 +18,9 @@
                     data-request="onSave"
                     data-hotkey="ctrl+s"
                     data-hotkey-mac="cmd+s"
-                    data-load-indicator="Updating testimonial..."
+                    data-load-indicator="<?= e(trans('backend::lang.form.saving')) ?>"
                     class="btn btn-primary">
-                    Save
+                    <?= e(trans('backend::lang.form.save')) ?>
                 </button>
                 <button
                     type="button"
@@ -28,12 +28,12 @@
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter"
                     data-hotkey-mac="cmd+enter"
-                    data-load-indicator="Updating testimonial..."
+                    data-load-indicator="<?= e(trans('backend::lang.form.saving')) ?>"
                     class="btn btn-default">
-                    Save and Close
+                    <?= e(trans('backend::lang.form.save_and_close')) ?>
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('mja/testimonials/testimonials') ?>">Cancel</a>
+                    <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('mja/testimonials/testimonials') ?>"><?= e(trans('backend::lang.form.cancel')) ?></a>
                 </span>
             </div>
         </div>
@@ -47,6 +47,6 @@
             <?= Block::placeholder('breadcrumb') ?>
         </div>
         <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-        <p><a href="<?= Backend::url('tiipiik/booking/rooms') ?>" class="btn btn-default">Return to testimonial list</a></p>
+        <p><a href="<?= Backend::url('tiipiik/booking/rooms') ?>" class="btn btn-default"><?= e(trans('mja.testimonials::lang.controller.view.return')) ?></a></p>
     </div>
 <?php endif ?>

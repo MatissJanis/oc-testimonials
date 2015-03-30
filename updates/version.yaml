@@ -1,3 +1,4 @@
 1.0.1:
     - First version of MJA testimonials plugin
     - create_testimonial_table.php
+1.0.2: Moved language strings to language file and testimonies can now be deleted

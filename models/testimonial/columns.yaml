@@ -4,12 +4,12 @@
 
 columns:
     id:
-        label: ID
+        label: mja.testimonials::lang.fields.id
         invisible: true
 
     is_public:
-        label: Public
+        label: mja.testimonials::lang.fields.public
         type: switch
 
     author:
-        label: Author
+        label: mja.testimonials::lang.fields.author

@@ -1,6 +1,13 @@
-{% for testimonial in testimonials %}
-    <div class="testimonial">
-        {{ testimonial.content|raw }}
-        <p><i>/{{ testimonial.author }}/</i></p>
-    </div>
-{% endfor %}
+<div class="row">
+    {% for testimonial in testimonials %}
+        <div class="col-md-4">
+            <blockquote class="adjust2">
+                {{ testimonial.content|raw }}
+
+                {% if testimonial.author %}
+                    <small>{{ testimonial.author }}</small>
+                {% endif %}
+            </blockquote>
+        </div>
+    {% endfor %}
+</div>

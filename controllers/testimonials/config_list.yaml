@@ -2,38 +2,15 @@
 #  List Behavior Config
 # ===================================
 
-# Model List Column configuration
+title: mja.testimonials::lang.controller.list.title
 list: @/plugins/mja/testimonials/models/testimonial/columns.yaml
-
-# Model Class name
 modelClass: Mja\Testimonials\Models\Testimonial
-
-# List Title
-title: Manage Testimonials
-
-# Link URL for each record
 recordUrl: mja/testimonials/testimonials/update/:id
-
-# Message to display if the list is empty
-noRecordsMessage: backend::lang.list.no_records
-
-# Records to display per page
 recordsPerPage: 20
-
-# Displays the list column set up button
 showSetup: true
+showCheckboxes: true
 
-# Displays the sorting link on each column
-showSorting: true
-
-# Display checkboxes next to each record
-# showCheckboxes: true
-
-# Toolbar widget configuration
 toolbar:
-    # Partial for toolbar buttons
     buttons: list_toolbar
-
-    # Search widget configuration
     search:
         prompt: backend::lang.list.search_prompt

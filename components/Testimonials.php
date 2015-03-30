@@ -10,8 +10,8 @@ class Testimonials extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'Testimonials',
-            'description' => 'Create a list of testimonials'
+            'name'        => 'mja.testimonials::lang.components.testimonials.name',
+            'description' => 'mja.testimonials::lang.components.testimonials.description'
         ];
     }
 

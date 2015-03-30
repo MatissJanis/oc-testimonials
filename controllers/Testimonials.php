@@ -2,6 +2,8 @@
 
 use BackendMenu;
 use Backend\Classes\Controller;
+use Flash;
+use Lang;
 use Mja\Testimonials\Models\Testimonial;
 
 /**
@@ -19,13 +21,6 @@ class Testimonials extends Controller
 
     public $requiredPermissions = ['mja.testimonials.access_testimonials'];
 
-    public function __construct()
-    {
-        parent::__construct();
-
-        BackendMenu::setContext('Mja.Testimonials', 'testimonials', 'testimonials');
-    }
-
     public function index_onDelete()
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
@@ -37,7 +32,7 @@ class Testimonials extends Controller
                 $post->delete();
             }
 
-            Flash::success('Successfully deleted those testimonials.');
+            Flash::success(Lang::get('backend::lang.form.delete_success', ['name' => Lang::get('mja.testimonials::lang.controller.form.testimony')]));
         }
 
         return $this->listRefresh();

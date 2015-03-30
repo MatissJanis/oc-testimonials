@@ -19,10 +19,10 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'Testimonials',
-            'description' => 'Create and manage testimonials about You project or product.',
+            'name'        => 'mja.testimonials::lang.plugin.name',
+            'description' => 'mja.testimonials::lang.plugin.description',
             'author'      => 'Matiss Janis Aboltins',
-            'homepage'    => '',
+            'homepage'    => 'https://github.com/MatissJanis/oc-testimonials',
             'icon'        => 'icon-thumbs-o-up'
         ];
     }
@@ -48,7 +48,7 @@ class Plugin extends PluginBase
     {
         return [
             'testimonials' => [
-                'label'       => 'Testimonials',
+                'label'       => 'mja.testimonials::lang.navigation.label',
                 'url'         => Backend::url('mja/testimonials/testimonials'),
                 'icon'        => 'icon-thumbs-o-up',
                 'permissions' => ['mja.testimonials.*'],
