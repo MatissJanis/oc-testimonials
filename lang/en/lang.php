@@ -14,7 +14,7 @@ return [
     ],
     'components' => [
         'testimonials' => [
-            'label' => 'Testimonials',
+            'name' => 'Testimonials',
             'description' => 'Create a list of testimonials',
         ],
     ],
