@@ -1,44 +1,46 @@
 <?php
 
 return [
-    'plugin' => [
-        'name' => 'Testimonials',
+    'plugin'      => [
+        'name'        => 'Testimonials',
         'description' => 'Create and manage testimonials about You project or product.',
     ],
     'permissions' => [
-        'tab' => 'Testimonials',
+        'tab'          => 'Testimonials',
         'testimonials' => 'Manage testimonials',
     ],
-    'navigation' => [
+    'navigation'  => [
         'label' => 'Testimonials',
     ],
-    'components' => [
+    'components'  => [
         'testimonials' => [
-            'name' => 'Testimonials',
+            'name'        => 'Testimonials',
             'description' => 'Create a list of testimonials',
         ],
     ],
-    'controller' => [
+    'controller'  => [
         'view' => [
-            'new' => 'New Testimony',
+            'new'              => 'New Testimony',
             'breadcrumb_label' => 'Testimonials',
-            'return' => 'Return to testimonial list',
+            'return'           => 'Return to testimonial list',
         ],
         'list' => [
-            'title' => 'Manage Testimonials'
+            'title' => 'Manage Testimonials',
         ],
         'form' => [
-            'title' => 'Testimonials',
+            'title'        => 'Testimonials',
             'update_title' => 'Update Testimonial',
             'create_title' => 'Create Testimonial',
-            'testimony' => 'testimony',
+            'testimony'    => 'testimony',
         ],
     ],
-    'fields' => [
-        'id' => 'ID',
-        'author' => 'Author',
-        'is_public' => 'Is this testimonial public?',
-        'private' => 'Private',
-        'public' => 'Public',
+    'fields'      => [
+        'id'           => 'ID',
+        'author'       => 'Author',
+        'is_public'    => 'Is this testimonial public?',
+        'private'      => 'Private',
+        'public'       => 'Public',
+        'date'         => 'Date',
+        'date_comment' => 'When was this testimony published? This field may be left empty',
     ],
 ];

@@ -13,3 +13,7 @@ columns:
 
     author:
         label: mja.testimonials::lang.fields.author
+
+    date:
+        label: mja.testimonials::lang.fields.date
+        type: date

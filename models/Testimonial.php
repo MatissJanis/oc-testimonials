@@ -32,28 +32,29 @@ class Testimonial extends Model
      */
     public $rules = [
         'content' => 'required',
-        'author' => ''
+        'author'  => '',
+        'date'    => 'date',
     ];
 
     /**
      * @var array Relations
      */
-    public $hasOne = [];
-    public $hasMany = [];
-    public $belongsTo = [];
+    public $hasOne        = [];
+    public $hasMany       = [];
+    public $belongsTo     = [];
     public $belongsToMany = [];
-    public $morphTo = [];
-    public $morphOne = [];
-    public $morphMany = [];
-    public $attachOne = [];
-    public $attachMany = [];
+    public $morphTo       = [];
+    public $morphOne      = [];
+    public $morphMany     = [];
+    public $attachOne     = [];
+    public $attachMany    = [];
 
     /*
-        Avoid 'preview' to be passed on save & update requests
-    */
+    Avoid 'preview' to be passed on save & update requests
+     */
     public $preview = null;
 
-     /**
+    /**
      * Add translation support to this model, if available.
      * @return void
      */
@@ -63,11 +64,12 @@ class Testimonial extends Model
         parent::boot();
 
         // Check the translate plugin is installed
-        if (!class_exists('RainLab\Translate\Behaviors\TranslatableModel'))
+        if (!class_exists('RainLab\Translate\Behaviors\TranslatableModel')) {
             return;
+        }
 
         // Extend the constructor of the model
-        self::extend(function($model){
+        self::extend(function ($model) {
 
             // Implement the translatable behavior
             $model->implement[] = 'RainLab.Translate.Behaviors.TranslatableModel';

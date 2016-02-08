@@ -6,6 +6,14 @@ fields:
             0: mja.testimonials::lang.fields.private
             1: mja.testimonials::lang.fields.public
         default: 1
+        span: left
+
+    date:
+        label: mja.testimonials::lang.fields.date
+        comment: mja.testimonials::lang.fields.date_comment
+        type: datepicker
+        mode: date
+        span: right
 
     content:
         type: richeditor

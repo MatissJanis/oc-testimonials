@@ -3,3 +3,6 @@
     - create_testimonial_table.php
 1.0.2: Moved language strings to language file and testimonies can now be deleted
 1.0.3: Removed Rainlab.Translate required dependency (thanks @flip4bytes and @ribsousa); Fixed language file
+1.1.0:
+    - Add testimonial date field as requested in issue #5.
+    - add_testimonial_date_column.php
