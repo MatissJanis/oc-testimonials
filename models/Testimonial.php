@@ -46,7 +46,9 @@ class Testimonial extends Model
     public $morphTo       = [];
     public $morphOne      = [];
     public $morphMany     = [];
-    public $attachOne     = [];
+    public $attachOne     = [
+        'avatar' => 'System\Models\File',
+    ];
     public $attachMany    = [];
 
     /*

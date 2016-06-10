@@ -20,3 +20,18 @@ fields:
 
     author:
         label: mja.testimonials::lang.fields.author
+        span: left
+
+    avatar:
+        label: mja.testimonials::lang.fields.avatar
+        type: fileupload
+        mode: image
+        imageWidth: 100
+        imageHeight: 100
+        span: auto
+
+    author_bio:
+        label: mja.testimonials::lang.fields.author_bio
+        span: left
+        type: textarea
+        size: small
