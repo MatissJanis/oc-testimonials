@@ -37,6 +37,8 @@ return [
     'fields'      => [
         'id'           => 'ID',
         'author'       => 'Author',
+        'author_bio'   => 'Author Bio',
+        'avatar'       => 'Avatar',
         'is_public'    => 'Is this testimonial public?',
         'private'      => 'Private',
         'public'       => 'Public',

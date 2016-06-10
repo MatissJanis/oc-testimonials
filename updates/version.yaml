@@ -6,3 +6,8 @@
 1.1.0:
     - Add testimonial date field as requested in issue #5.
     - add_testimonial_date_column.php
+1.1.1:
+    - Fix deprecated syntax
+1.1.2:
+    - Add author bio and avatar on testimonial
+    - add_author_bio_column_on_testimonials_table.php
