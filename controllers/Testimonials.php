@@ -21,6 +21,13 @@ class Testimonials extends Controller
 
     public $requiredPermissions = ['mja.testimonials.access_testimonials'];
 
+    public function __construct()
+    {
+        parent::__construct();
+
+        BackendMenu::setContext('Mja.Testimonials', 'testimonials', 'testimonials');
+    }
+
     public function index_onDelete()
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
