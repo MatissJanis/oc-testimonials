@@ -3,7 +3,7 @@
 # ===================================
 
 name: mja.testimonials::lang.controller.form.title
-form: @/plugins/mja/testimonials/models/testimonial/fields.yaml
+form: $/mja/testimonials/models/testimonial/fields.yaml
 modelClass: Mja\Testimonials\Models\Testimonial
 defaultRedirect: mja/testimonials/testimonials
 

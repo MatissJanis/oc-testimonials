@@ -3,7 +3,7 @@
 # ===================================
 
 title: mja.testimonials::lang.controller.list.title
-list: @/plugins/mja/testimonials/models/testimonial/columns.yaml
+list: $/mja/testimonials/models/testimonial/columns.yaml
 modelClass: Mja\Testimonials\Models\Testimonial
 recordUrl: mja/testimonials/testimonials/update/:id
 recordsPerPage: 20
