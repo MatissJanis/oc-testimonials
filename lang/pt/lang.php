@@ -37,12 +37,12 @@ return [
     'fields'      => [
         'id'           => 'ID',
         'author'       => 'Autor',
-        'author_bio'   => 'Usuario do Instagram',
+        'author_bio'   => 'Biografia do Autor',
         'avatar'       => 'Avatar',
-        'is_public'    => 'Este depoimento está:',
-        'private'      => 'Em análise',
-        'public'       => 'Aprovado',
-        'date'         => 'Date',
+        'is_public'    => 'Visibilidade:',
+        'private'      => 'Privado',
+        'public'       => 'Público',
+        'date'         => 'Data',
         'date_comment' => 'Quando este depoimento foi publicado? Este campo pode ficar vazio',
     ],
 ];
