@@ -12,3 +12,4 @@
     - Add author bio and avatar on testimonial
     - add_author_bio_column_on_testimonials_table.php
 1.1.3: Add Portugese translations. Thanks @eduardoborges
+1.1.4: Put query content into the component itself
