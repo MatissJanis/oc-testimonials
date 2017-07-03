@@ -6,6 +6,7 @@ use Mja\Testimonials\Models\Testimonial;
 
 class Testimonials extends ComponentBase
 {
+    public $testimonials;
 
     public function componentDetails()
     {
@@ -17,7 +18,7 @@ class Testimonials extends ComponentBase
 
     public function onRun()
     {
-        $this->page['testimonials'] = Testimonial::whereIsPublic(1)->get();
+        $this->testimonials = Testimonial::whereIsPublic(1)->get();
     }
 
 }
