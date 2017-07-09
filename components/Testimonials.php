@@ -1,6 +1,5 @@
 <?php namespace Mja\Testimonials\Components;
 
-use Cms\Classes\Page;
 use Cms\Classes\ComponentBase;
 use Mja\Testimonials\Models\Testimonial;
 
@@ -18,7 +17,7 @@ class Testimonials extends ComponentBase
 
     public function onRun()
     {
-        $this->testimonials = Testimonial::whereIsPublic(1)->get();
+        $this->page['testimonials'] = $this->testimonials = Testimonial::whereIsPublic(1)->get();
     }
 
 }
