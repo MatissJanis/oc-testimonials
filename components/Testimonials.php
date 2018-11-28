@@ -11,7 +11,7 @@ class Testimonials extends ComponentBase
     {
         return [
             'name'        => 'mja.testimonials::lang.components.testimonials.name',
-            'description' => 'mja.testimonials::lang.components.testimonials.description'
+            'description' => 'mja.testimonials::lang.components.testimonials.description',
         ];
     }
 

@@ -49,7 +49,7 @@ class Testimonial extends Model
     public $attachOne     = [
         'avatar' => 'System\Models\File',
     ];
-    public $attachMany    = [];
+    public $attachMany = [];
 
     /*
     Avoid 'preview' to be passed on save & update requests

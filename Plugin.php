@@ -20,7 +20,7 @@ class Plugin extends PluginBase
             'description' => 'mja.testimonials::lang.plugin.description',
             'author'      => 'Matiss Janis Aboltins',
             'homepage'    => 'https://github.com/MatissJanis/oc-testimonials',
-            'icon'        => 'icon-thumbs-o-up'
+            'icon'        => 'icon-thumbs-o-up',
         ];
     }
 
@@ -31,15 +31,15 @@ class Plugin extends PluginBase
         ];
     }
 
-	public function registerPermissions()
-	{
-		return [
+    public function registerPermissions()
+    {
+        return [
             'mja.testimonials.access_testimonials' => [
-                'tab' => 'mja.testimonials::lang.permissions.tab',
-                'label' => 'mja.testimonials::lang.permissions.testimonials'
+                'tab'   => 'mja.testimonials::lang.permissions.tab',
+                'label' => 'mja.testimonials::lang.permissions.testimonials',
             ],
         ];
-	}
+    }
 
     public function registerNavigation()
     {
@@ -49,7 +49,7 @@ class Plugin extends PluginBase
                 'url'         => Backend::url('mja/testimonials/testimonials'),
                 'icon'        => 'icon-thumbs-o-up',
                 'permissions' => ['mja.testimonials.*'],
-            ]
+            ],
         ];
     }
 }

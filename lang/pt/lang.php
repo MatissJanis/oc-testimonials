@@ -6,7 +6,7 @@ return [
         'description' => 'Crie e gerencie depoimentos sobre seu projeto.',
     ],
     'permissions' => [
-        'tab'          => 'Depoimentos',
+        'tab'         => 'Depoimentos',
         'Depoimentos' => 'Gerenciar Depoimentos',
     ],
     'navigation'  => [

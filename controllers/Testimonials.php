@@ -13,7 +13,7 @@ class Testimonials extends Controller
 {
     public $implement = [
         'Backend.Behaviors.FormController',
-        'Backend.Behaviors.ListController'
+        'Backend.Behaviors.ListController',
     ];
 
     public $formConfig = 'config_form.yaml';
@@ -31,10 +31,10 @@ class Testimonials extends Controller
     public function index_onDelete()
     {
         if (($checkedIds = post('checked')) && is_array($checkedIds) && count($checkedIds)) {
-
             foreach ($checkedIds as $postId) {
-                if (!$post = Testimonial::find($postId))
+                if (!$post = Testimonial::find($postId)) {
                     continue;
+                }
 
                 $post->delete();
             }
